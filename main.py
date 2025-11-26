@@ -161,7 +161,7 @@ def main():
     while True:
         try:
             data_sensor = set_queue.get_nowait()  # แทนการเช็ค empty()
-            print("data_sensor => ",data_sensor)
+            # print("data_sensor => ",data_sensor)
         except Empty:
             break
         now_ms = int(time.time() * 1000)
