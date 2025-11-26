@@ -151,8 +151,8 @@ def save_to_db_meter():
 # ─────────────────────────────────────────────────────────────
 def main():
     set_queue = Queue()
-    # poller = SensorPoller(ui_queue=set_queue, polling_interval=10)
-    poller = create_mock_poller(ui_queue=set_queue, polling_interval=10)
+    poller = SensorPoller(ui_queue=set_queue, polling_interval=10)
+    # poller = create_mock_poller(ui_queue=set_queue, polling_interval=10)
     # เริ่มอ่าน 10 วินาที แล้วหยุด จากนั้นดูดคิวให้หมด
     poller.start()
     time.sleep(10)
